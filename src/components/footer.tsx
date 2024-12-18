@@ -1,8 +1,17 @@
+'use client'
+
 import Image from 'next/image'
 import Link from 'next/link'
 import { Instagram, Linkedin, Facebook } from 'lucide-react'
 
 export function Footer() {
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId)
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+
   return (
     <footer className="bg-background border-t border-border">
       <div className="container px-4 py-12 mx-auto">
@@ -37,26 +46,34 @@ export function Footer() {
             <h3 className="text-lg font-semibold mb-4 text-primary">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <button onClick={() => document.getElementById('home')?.scrollIntoView({ behavior: 'smooth' })} 
-                  className="text-muted-foreground hover:text-primary">
+                <button 
+                  onClick={() => scrollToSection('home')}
+                  className="text-muted-foreground hover:text-primary"
+                >
                   Home
                 </button>
               </li>
               <li>
-                <button onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
-                  className="text-muted-foreground hover:text-primary">
+                <button 
+                  onClick={() => scrollToSection('about')}
+                  className="text-muted-foreground hover:text-primary"
+                >
                   About Us
                 </button>
               </li>
               <li>
-                <button onClick={() => document.getElementById('domains')?.scrollIntoView({ behavior: 'smooth' })}
-                  className="text-muted-foreground hover:text-primary">
+                <button 
+                  onClick={() => scrollToSection('domains')}
+                  className="text-muted-foreground hover:text-primary"
+                >
                   Domains
                 </button>
               </li>
               <li>
-                <button onClick={() => document.getElementById('timeline')?.scrollIntoView({ behavior: 'smooth' })}
-                  className="text-muted-foreground hover:text-primary">
+                <button 
+                  onClick={() => scrollToSection('timeline')}
+                  className="text-muted-foreground hover:text-primary"
+                >
                   Timeline
                 </button>
               </li>
@@ -82,7 +99,7 @@ export function Footer() {
 
         <div className="mt-12 pt-8 border-t border-border text-center text-muted-foreground">
           <p>© 2024 Err_404. All rights reserved.</p>
-          <p>Designed by Programmers Club</p>
+          <p>Designed by Programmers' Club</p>
         </div>
       </div>
     </footer>

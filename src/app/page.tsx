@@ -1,6 +1,7 @@
 import { Navbar } from '@/components/navbar'
 import { Hero } from '@/components/hero'
 import { About } from '@/components/about'
+import { Domains } from '@/components/domains'
 import { Countdown } from '@/components/countdown'
 import { Footer } from '@/components/footer'
 import { ShootingStarBackground } from '@/components/shooting-stars'
@@ -16,6 +17,7 @@ export default function Home() {
       <section id="about">
         <About />
       </section>
+      <Domains />
       <Countdown />
       <Footer />
     </main>
