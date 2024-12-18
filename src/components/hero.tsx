@@ -19,21 +19,21 @@ export function Hero() {
             <h1 className={`text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-primary ${pixelFont.className}`}>
               Err_404 6.0
             </h1>
-            <div className="text-2xl sm:text-3xl lg:text-4xl text-primary">
+            <div className="text-3xl sm:text-4xl lg:text-4xl text-primary">
               <TypedText strings={typedStrings} />
             </div>
-            <p className="text-lg text-muted-foreground max-w-xl">
+            <p className="text-xl text-muted-foreground max-w-xl">
               Join us on 18th and 19th of January 2025 for 36 hours of creation, innovation, & fun with
               over 500+ students.
             </p>
-            <Button size="lg" className="text-lg px-8 py-6">
+            <Button size="lg" className="text-xl px-8 py-6">
               Register
             </Button>
           </div>
           <div className="relative h-[400px] lg:h-[600px]">
             <Image
-              src="/rbgdinosaur.gif"
-              alt="HackNiche Illustration"
+              src="/dinosaur.gif"
+              alt="Dino"
               fill
               className="object-contain"
               priority

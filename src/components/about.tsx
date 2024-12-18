@@ -30,8 +30,8 @@ export function About() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <Card className="bg-accent/50">
               <CardContent className="p-6">
-                <h3 className="text-2xl font-bold mb-4">What is Err_404?</h3>
-                <p className="text-muted-foreground">
+                <h3 className="text-3xl font-bold mb-4">What is Err_404?</h3>
+                <p className="text-muted-foreground text-lg">
                   ERR_404 is a nationally recognized two-day Hackathon organized by
                   the Computer Department of Anjuman-I-Islam M.H. Saboo Siddik
                   College of Engineering. Calling all cyber enthusiasts and tech-savvy
@@ -52,7 +52,7 @@ export function About() {
 
             <Card className="bg-accent/50">
               <CardContent className="p-6">
-                <h3 className="text-2xl font-bold mb-4">Err_404&apos;s Team</h3>
+                <h3 className="text-3xl font-bold mb-4">Err_404&apos;s Team</h3>
                 <div className="relative h-[300px] rounded-lg overflow-hidden">
                   <Image
                     src="/team.jpg"

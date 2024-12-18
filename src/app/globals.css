@@ -76,5 +76,7 @@
   body {
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
+    cursor: url('/cursors/cursor.cur') 16 16, auto;
+    
   }
 }

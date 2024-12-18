@@ -66,8 +66,8 @@ export function Domains() {
                     className="text-primary"
                   />
                 </div>
-                <h3 className="mb-2 text-xl font-semibold">{domain.title}</h3>
-                <p className="text-muted-foreground text-sm">{domain.description}</p>
+                <h3 className="mb-2 text-2xl font-semibold">{domain.title}</h3>
+                <p className="text-muted-foreground text-base">{domain.description}</p>
               </div>
               <div
                 className={cn(
