@@ -26,7 +26,7 @@ export function Footer() {
               className="h-12 w-auto"
             />
             <p className="text-muted-foreground max-w-xs">
-              Transforming Skills, Inspiring Innovation, and Creating Tomorrow's Trailblazers.
+              Transforming Skills, Inspiring Innovation, and Creating Tomorrow&apos;s Trailblazers.
             </p>
             <div className="flex space-x-4">
               <Link href="https://instagram.com" className="text-muted-foreground hover:text-primary">
@@ -99,7 +99,7 @@ export function Footer() {
 
         <div className="mt-12 pt-8 border-t border-border text-center text-muted-foreground">
           <p>© 2024 Err_404. All rights reserved.</p>
-          <p>Designed by Programmers' Club</p>
+          <p>Designed by Programmers&apos; Club</p>
         </div>
       </div>
     </footer>
