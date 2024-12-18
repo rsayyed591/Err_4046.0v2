@@ -17,8 +17,8 @@ export default function Home() {
       <section id="about">
         <About />
       </section>
-      <Domains />
       <Countdown />
+      <Domains />
       <Footer />
     </main>
   )

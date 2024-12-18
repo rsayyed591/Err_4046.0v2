@@ -16,7 +16,7 @@ export function Hero() {
       <div className="container px-4 mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
-            <h1 className={`text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-primary ${pixelFont.className}`}>
+            <h1 className={`text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-primary ${pixelFont.className}`}>
               Err_404 6.0
             </h1>
             <div className="text-2xl sm:text-3xl lg:text-4xl text-primary">
