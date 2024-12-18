@@ -1,21 +1,82 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
+ 
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: 224 71% 4%;
+    --foreground: 213 31% 91%;
+
+    --muted: 223 47% 11%;
+    --muted-foreground: 215.4 16.3% 56.9%;
+
+    --accent: 216 34% 17%;
+    --accent-foreground: 210 40% 98%;
+
+    --popover: 224 71% 4%;
+    --popover-foreground: 215 20.2% 65.1%;
+
+    --border: 216 34% 17%;
+    --input: 216 34% 17%;
+
+    --card: 224 71% 4%;
+    --card-foreground: 213 31% 91%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 1.2%;
+
+    --secondary: 222.2 47.4% 11.2%;
+    --secondary-foreground: 210 40% 98%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+
+    --ring: 216 34% 17%;
+
+    --radius: 0.5rem;
+  }
+}
+ 
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.shooting-star {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 4px;
+  height: 4px;
+  background: #000;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px rgba(0,0,0,0.1),
+              0 0 0 8px rgba(0,0,0,0.1),
+              0 0 20px rgba(0,0,0,1);
+  animation: shoot 3s linear infinite;
+}
+
+.shooting-star:nth-child(1) { transform: rotate(45deg); top: 0; left: 50%; animation-delay: 0s; }
+.shooting-star:nth-child(2) { transform: rotate(45deg); top: 20%; left: 0; animation-delay: 0.6s; }
+.shooting-star:nth-child(3) { transform: rotate(45deg); top: 40%; left: 80%; animation-delay: 1.2s; }
+.shooting-star:nth-child(4) { transform: rotate(45deg); top: 60%; left: 10%; animation-delay: 1.8s; }
+.shooting-star:nth-child(5) { transform: rotate(45deg); top: 80%; left: 70%; animation-delay: 2.4s; }
+
+@keyframes shoot {
+  0% {
+    transform: rotate(45deg) translateX(0);
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(45deg) translateX(1000px);
+    opacity: 0;
+  }
 }
