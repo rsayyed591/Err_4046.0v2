@@ -1,5 +1,5 @@
 'use client'
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import { Card, CardContent } from "@/components/ui/card"
 import { useInView } from 'react-intersection-observer'
@@ -41,7 +41,7 @@ export function About() {
                   strong emphasis on developing interpersonal skills such as
                   teamwork, leadership, meticulousness, adaptability, and the ability to
                   brainstorm ideas while successfully creating and executing a
-                  functional prototype. Whether you're a first-time hackathon
+                  functional prototype. Whether you&apos;re a first-time hackathon
                   participant or a seasoned veteran with numerous hackathons under
                   your belt, we welcome students of all skill levels and from all colleges
                   to join us for a weekend filled with creativity, collaboration, and
@@ -52,7 +52,7 @@ export function About() {
 
             <Card className="bg-accent/50">
               <CardContent className="p-6">
-                <h3 className="text-2xl font-bold mb-4">Err_404's Team</h3>
+                <h3 className="text-2xl font-bold mb-4">Err_404&apos;s Team</h3>
                 <div className="relative h-[300px] rounded-lg overflow-hidden">
                   <Image
                     src="/team.jpg"
