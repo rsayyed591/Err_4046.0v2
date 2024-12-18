@@ -4,22 +4,25 @@ import { About } from '@/components/about'
 import { Domains } from '@/components/domains'
 import { Countdown } from '@/components/countdown'
 import { Footer } from '@/components/footer'
-import { ShootingStarBackground } from '@/components/shooting-stars'
+import { AnimatedGridBackground } from '@/components/animated-grid'
 
 export default function Home() {
   return (
-    <main className="bg-background min-h-screen">
-      <ShootingStarBackground />
-      <Navbar />
-      <section id="home">
-        <Hero />
-      </section>
-      <section id="about">
-        <About />
-      </section>
-      <Countdown />
-      <Domains />
-      <Footer />
+    <main className="relative min-h-screen">
+      <AnimatedGridBackground />
+      <div className="relative z-10">
+        <Navbar />
+        <section id="home">
+          <Hero />
+        </section>
+        <section id="about">
+          <About />
+        </section>
+        <Countdown />
+        <Domains />
+        <Footer />
+      </div>
     </main>
   )
 }
+

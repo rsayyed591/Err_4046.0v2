@@ -32,7 +32,7 @@ export function Hero() {
           </div>
           <div className="relative h-[400px] lg:h-[600px]">
             <Image
-              src="/dinosaur.gif"
+              src="/rbgdinosaur.gif"
               alt="HackNiche Illustration"
               fill
               className="object-contain"
