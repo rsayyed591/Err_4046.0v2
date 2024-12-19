@@ -1,7 +1,8 @@
-import { Button } from "@/components/ui/button"
+// import { Button } from "@/components/ui/button"
 import { TypedText } from './typed-text'
 import { pixelFont } from '@/app/fonts'
 import DinoGame from './dino-game'
+import { DevfolioButton } from './devfolio-button'
 
 export function Hero() {
   const typedStrings = [
@@ -26,9 +27,7 @@ export function Hero() {
               Join us on 18th and 19th of January 2025 for 36 hours of creation, innovation, & fun with
               over 500+ students.
             </p>
-            <Button size="lg" className="text-xl px-8 py-6">
-              Register
-            </Button>
+            <DevfolioButton />
           </div>
           <div className="relative h-[400px] lg:h-[600px] flex items-center justify-center">
             <DinoGame />
@@ -38,4 +37,3 @@ export function Hero() {
     </div>
   )
 }
-

@@ -30,7 +30,7 @@ export function About() {
           {/* Bottom row - About and Team */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <motion.div whileHover={{ scale: 1.05 }} transition={{ type: "spring", stiffness: 300 }}>
-              <Card className="bg-white shadow-lg">
+              <Card className="bg-white shadow-lg h-full">
                 <CardContent className="p-6">
                   <h3 className="text-3xl font-bold mb-4">What is Err_404?</h3>
                   <p className="text-muted-foreground text-lg">
@@ -54,7 +54,7 @@ export function About() {
             </motion.div>
 
             <motion.div whileHover={{ scale: 1.05 }} transition={{ type: "spring", stiffness: 300 }}>
-              <Card className="bg-white shadow-lg">
+              <Card className="bg-white shadow-lg h-full">
                 <CardContent className="p-6">
                   <h3 className="text-3xl font-bold mb-4">Err_404&apos;s Team</h3>
                   <div className="relative h-[300px] rounded-lg overflow-hidden">

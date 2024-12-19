@@ -20,6 +20,7 @@ import {
   SheetContent,
   SheetTrigger,
 } from "@/components/ui/sheet"
+import { DevfolioButton } from './devfolio-button'
 
 export function Navbar() {
   const scrollToSection = (sectionId: string) => {
@@ -35,7 +36,7 @@ export function Navbar() {
         <Link href="/" className="flex items-center space-x-2">
           <Image
             src="/logo.png"
-            alt="HackNiche Logo"
+            alt="Err_404 Logo"
             width={180}
             height={50}
             className="h-16 w-auto"
@@ -153,9 +154,10 @@ export function Navbar() {
           </SheetContent>
         </Sheet>
 
-        <Button className="hidden lg:inline-flex text-lg px-6 py-2">
-          Register
-        </Button>
+        <div className="hidden lg:block">
+          <DevfolioButton />
+        </div>
+
       </div>
     </header>
   )
