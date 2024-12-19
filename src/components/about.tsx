@@ -4,12 +4,14 @@ import Image from 'next/image'
 import { Card, CardContent } from "@/components/ui/card"
 import { useInView } from 'react-intersection-observer'
 import { motion } from 'framer-motion'
-
+import { pixelFont } from '@/app/fonts'
 export function About() {
   return (
     <section className="py-20">
       <div className="container px-4 mx-auto">
-        <h2 className="text-4xl font-bold mb-12 text-center">About Us</h2>
+        <h1 className={`text-3xl md:text-5xl font-bold mb-12 md:mb-20 text-center ${pixelFont.className}`}>
+                  About Us
+                </h1>
         <div className="grid gap-6">
           {/* Top row - Statistics */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

@@ -5,6 +5,8 @@ import { Domains } from '@/components/domains'
 import { Countdown } from '@/components/countdown'
 import { Footer } from '@/components/footer'
 import { AnimatedGridBackground } from '@/components/animated-grid'
+import Timeline from '@/components/timeline'
+import HackathonHistory from '@/components/hackathon-history'
 
 export default function Home() {
   return (
@@ -20,6 +22,8 @@ export default function Home() {
         </section>
         <Countdown />
         <Domains />
+        <HackathonHistory/>
+        <Timeline/>
         <Footer />
       </div>
     </main>

@@ -3,7 +3,7 @@
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { Card, CardContent } from "@/components/ui/card"
-
+import { pixelFont } from '@/app/fonts'
 const domains = [
   {
     title: "Machine Learning",
@@ -35,7 +35,9 @@ export function Domains() {
   return (
     <section id="domains" className="py-20">
       <div className="container px-4 mx-auto">
-        <h2 className="text-4xl font-bold text-center mb-12">Domains</h2>
+        <h1 className={`text-3xl md:text-5xl font-bold mb-12 md:mb-20 text-center ${pixelFont.className}`}>
+                  Domains
+                </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {domains.map((domain) => (
             <motion.div
