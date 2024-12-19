@@ -1,8 +1,6 @@
 'use client'
 
 import { useEffect } from 'react'
-import { Button } from '@/components/ui/button'
-import { Code2 } from 'lucide-react'
 
 export function DevfolioButton() {
   useEffect(() => {
@@ -20,13 +18,8 @@ export function DevfolioButton() {
     <div 
       className="apply-button" 
       data-hackathon-slug="err-11" 
-      data-button-theme="light"
+      data-button-theme="dark-inverted"
       style={{ height: '44px', width: '312px' }}
-    >
-      <Button className="w-full h-full bg-blue-600 hover:bg-blue-700 text-lg gap-2">
-        <Code2 className="h-5 w-5" />
-        Apply with Devfolio
-      </Button>
-    </div>
+    ></div>
   )
 }
