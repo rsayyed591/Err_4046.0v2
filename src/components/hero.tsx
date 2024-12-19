@@ -1,7 +1,7 @@
-import Image from 'next/image'
 import { Button } from "@/components/ui/button"
 import { TypedText } from './typed-text'
 import { pixelFont } from '@/app/fonts'
+import DinoGame from './dino-game'
 
 export function Hero() {
   const typedStrings = [
@@ -30,17 +30,12 @@ export function Hero() {
               Register
             </Button>
           </div>
-          <div className="relative h-[400px] lg:h-[600px]">
-            <Image
-              src="/dinosaur.gif"
-              alt="Dino"
-              fill
-              className="object-contain"
-              priority
-            />
+          <div className="relative h-[400px] lg:h-[600px] flex items-center justify-center">
+            <DinoGame />
           </div>
         </div>
       </div>
     </div>
   )
 }
+

@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import { Card, CardContent } from "@/components/ui/card"
 import { useInView } from 'react-intersection-observer'
+import { motion } from 'framer-motion'
 
 export function About() {
   return (
@@ -28,41 +29,45 @@ export function About() {
 
           {/* Bottom row - About and Team */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <Card className="bg-accent/50">
-              <CardContent className="p-6">
-                <h3 className="text-3xl font-bold mb-4">What is Err_404?</h3>
-                <p className="text-muted-foreground text-lg">
-                  ERR_404 is a nationally recognized two-day Hackathon organized by
-                  the Computer Department of Anjuman-I-Islam M.H. Saboo Siddik
-                  College of Engineering. Calling all cyber enthusiasts and tech-savvy
-                  learners! This is your chance to step forward, seize the opportunity,
-                  showcase your exceptional skills, and transform your innovative ideas
-                  into reality in a competitive atmosphere. The hackathon places a
-                  strong emphasis on developing interpersonal skills such as
-                  teamwork, leadership, meticulousness, adaptability, and the ability to
-                  brainstorm ideas while successfully creating and executing a
-                  functional prototype. Whether you&apos;re a first-time hackathon
-                  participant or a seasoned veteran with numerous hackathons under
-                  your belt, we welcome students of all skill levels and from all colleges
-                  to join us for a weekend filled with creativity, collaboration, and
-                  coding.
-                </p>
-              </CardContent>
-            </Card>
+            <motion.div whileHover={{ scale: 1.05 }} transition={{ type: "spring", stiffness: 300 }}>
+              <Card className="bg-white shadow-lg">
+                <CardContent className="p-6">
+                  <h3 className="text-3xl font-bold mb-4">What is Err_404?</h3>
+                  <p className="text-muted-foreground text-lg">
+                    ERR_404 is a nationally recognized two-day Hackathon organized by
+                    the Computer Department of Anjuman-I-Islam M.H. Saboo Siddik
+                    College of Engineering. Calling all cyber enthusiasts and tech-savvy
+                    learners! This is your chance to step forward, seize the opportunity,
+                    showcase your exceptional skills, and transform your innovative ideas
+                    into reality in a competitive atmosphere. The hackathon places a
+                    strong emphasis on developing interpersonal skills such as
+                    teamwork, leadership, meticulousness, adaptability, and the ability to
+                    brainstorm ideas while successfully creating and executing a
+                    functional prototype. Whether you&apos;re a first-time hackathon
+                    participant or a seasoned veteran with numerous hackathons under
+                    your belt, we welcome students of all skill levels and from all colleges
+                    to join us for a weekend filled with creativity, collaboration, and
+                    coding.
+                  </p>
+                </CardContent>
+              </Card>
+            </motion.div>
 
-            <Card className="bg-accent/50">
-              <CardContent className="p-6">
-                <h3 className="text-3xl font-bold mb-4">Err_404&apos;s Team</h3>
-                <div className="relative h-[300px] rounded-lg overflow-hidden">
-                  <Image
-                    src="/team.jpg"
-                    alt="Err_404 Team"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-              </CardContent>
-            </Card>
+            <motion.div whileHover={{ scale: 1.05 }} transition={{ type: "spring", stiffness: 300 }}>
+              <Card className="bg-white shadow-lg">
+                <CardContent className="p-6">
+                  <h3 className="text-3xl font-bold mb-4">Err_404&apos;s Team</h3>
+                  <div className="relative h-[300px] rounded-lg overflow-hidden">
+                    <Image
+                      src="/team.jpg"
+                      alt="Err_404 Team"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
           </div>
         </div>
       </div>
@@ -99,14 +104,16 @@ function StatCard({ number, label }: { number: number; label: string }) {
   }, [inView, number])
 
   return (
-    <Card className="bg-accent/50" ref={ref}>
-      <CardContent className="p-6">
-        <div className="space-y-2">
-          <h3 className="text-4xl font-bold">{count}{number > count ? '+' : ''}+</h3>
-          <p className="text-muted-foreground text-lg">{label}</p>
-        </div>
-      </CardContent>
-    </Card>
+    <motion.div whileHover={{ scale: 1.05 }} transition={{ type: "spring", stiffness: 300 }}>
+      <Card className="bg-white shadow-lg" ref={ref}>
+        <CardContent className="p-6">
+          <div className="space-y-2">
+            <h3 className="text-4xl font-bold">{count}{number > count ? '+' : ''}+</h3>
+            <p className="text-muted-foreground text-lg">{label}</p>
+          </div>
+        </CardContent>
+      </Card>
+    </motion.div>
   )
 }
 
