@@ -21,8 +21,10 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet"
 import { DevfolioButton } from './devfolio-button'
+import { useState } from 'react'
 
 export function Navbar() {
+  const [sheetOpen, setSheetOpen] = useState(false)
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId)
     if (element) {
@@ -109,7 +111,7 @@ export function Navbar() {
           </NavigationMenuList>
         </NavigationMenu>
 
-        <Sheet>
+        <Sheet open={sheetOpen} onOpenChange={setSheetOpen}>
           <SheetTrigger asChild className="lg:hidden">
             <Button variant="ghost" size="icon">
               <Menu className="h-6 w-6" />
@@ -118,21 +120,51 @@ export function Navbar() {
           </SheetTrigger>
           <SheetContent side="right">
             <nav className="flex flex-col gap-4">
-              <Link href="/about" className="text-foreground hover:text-primary">
+              <button
+                onClick={() => {
+                  scrollToSection('about')
+                  setSheetOpen(false)
+                }}
+                className="text-foreground hover:text-primary text-left"
+              >
                 About
-              </Link>
-              <Link href="/domains" className="text-foreground hover:text-primary">
+              </button>
+              <button
+                onClick={() => {
+                  scrollToSection('domains')
+                  setSheetOpen(false)
+                }}
+                className="text-foreground hover:text-primary text-left"
+              >
                 Domains
-              </Link>
-              <Link href="/hackathons" className="text-foreground hover:text-primary">
+              </button>
+              <button
+                onClick={() => {
+                  scrollToSection('hackathons')
+                  setSheetOpen(false)
+                }}
+                className="text-foreground hover:text-primary text-left"
+              >
                 Hackathons
-              </Link>
-              <Link href="/contact" className="text-foreground hover:text-primary">
+              </button>
+              <button
+                onClick={() => {
+                  scrollToSection('contact')
+                  setSheetOpen(false)
+                }}
+                className="text-foreground hover:text-primary text-left"
+              >
                 Contact
-              </Link>
-              <Link href="/timeline" className="text-foreground hover:text-primary">
+              </button>
+              <button
+                onClick={() => {
+                  scrollToSection('timeline')
+                  setSheetOpen(false)
+                }}
+                className="text-foreground hover:text-primary text-left"
+              >
                 Timeline
-              </Link>
+              </button>
               <details>
                 <summary className="text-foreground hover:text-primary cursor-pointer">More</summary>
                 <div className="pl-4 mt-2 flex flex-col gap-2">
@@ -188,3 +220,4 @@ const ListItem = React.forwardRef<
   )
 })
 ListItem.displayName = "ListItem"
+
