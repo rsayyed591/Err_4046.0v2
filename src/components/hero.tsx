@@ -1,7 +1,6 @@
-// import { Button } from "@/components/ui/button"
 import { TypedText } from './typed-text'
 import { pixelFont } from '@/app/fonts'
-import DinoGame from './dino-game'
+import { DinoScene } from './dino-scene'
 import { DevfolioButton } from './devfolio-button'
 
 export function Hero() {
@@ -13,7 +12,7 @@ export function Hero() {
   ]
 
   return (
-    <div className="min-h-screen flex items-center pt-32 lg:pt-16">
+    <div className="min-h-screen flex items-center px-4 pt-32 lg:pt-16">
       <div className="container px-4 mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
@@ -29,11 +28,12 @@ export function Hero() {
             </p>
             <DevfolioButton />
           </div>
-          <div className="relative h-[400px] lg:h-[600px] flex items-center justify-center">
-            <DinoGame />
+          <div className="relative h-[300px] sm:h-[400px] lg:h-[500px]">
+            <DinoScene />
           </div>
         </div>
       </div>
     </div>
   )
 }
+

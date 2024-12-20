@@ -43,7 +43,7 @@ const events: TimelineEvent[] = [
     side: 'right'
   },
   {
-    date: "20TH JAN 2025",
+    date: "19TH JAN 2025",
     title: "Project Submissions",
     description: "Time to showcase your work! Submit your projects for evaluation.",
     icon: <Footprints className="w-6 h-6" />,
