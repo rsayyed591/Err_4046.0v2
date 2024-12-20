@@ -65,7 +65,7 @@ export default function Gallery() {
   const [isFullscreen, setIsFullscreen] = useState(false)
   const [showThumbnails, setShowThumbnails] = useState(true)
   const imageRef = useRef<HTMLDivElement>(null)
-  const slideshowIntervalRef = useRef<NodeJS.Timeout>()
+  const slideshowIntervalRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
     return () => {
@@ -108,10 +108,10 @@ export default function Gallery() {
 
   const toggleSlideshow = () => {
     setIsPlaying(prev => !prev)
-    
+
     if (slideshowIntervalRef.current) {
       clearInterval(slideshowIntervalRef.current)
-      slideshowIntervalRef.current = undefined
+      slideshowIntervalRef.current = null
     }
 
     if (!isPlaying && selectedImage !== null) {
