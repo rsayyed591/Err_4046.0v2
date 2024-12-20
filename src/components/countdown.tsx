@@ -37,9 +37,9 @@ export function Countdown() {
   return (
     <section className="py-20 relative overflow-hidden">
       <div className="container px-4 mx-auto text-center">
-        <h2 className={`text-3xl md:text-4xl font-bold m-16 text-gray-600 ${pixelFont.className}`}>
-          Time is Running Out, Code Warriors Assemble!
-        </h2>
+        <h2 className={`text-3xl md:text-5xl font-bold mb-12 md:mb-20 text-center ${pixelFont.className}`}>
+        Time is Running Out,<br /> Code Warriors Assemble!
+                </h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
           {[
             { label: 'DAYS', value: timeLeft.days },

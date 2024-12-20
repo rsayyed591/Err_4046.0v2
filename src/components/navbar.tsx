@@ -92,15 +92,18 @@ export function Navbar() {
               <NavigationMenuContent>
                 <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
                   {[
-                    { title: "Guidelines", href: "/guidelines", description: "Event rules and regulations" },
-                    { title: "Gallery", href: "/gallery", description: "Photos from past events" },
-                    { title: "FAQ", href: "/faq", description: "Frequently asked questions" },
-                    { title: "Contact", href: "/contact", description: "Get in touch with us" },
+                    { title: "Guidelines", sectionId: "guidelines", description: "Event rules and regulations" },
+                    { title: "Gallery", sectionId: "gallery", description: "Photos from past events" },
+                    { title: "FAQ", sectionId: "faq", description: "Frequently asked questions" },
+                    { title: "Contact", sectionId: "contact", description: "Get in touch with us" },
                   ].map((item) => (
                     <ListItem
                       key={item.title}
                       title={item.title}
-                      href={item.href}
+                      onClick={() => {
+                        scrollToSection(item.sectionId)
+                        setSheetOpen(false)
+                      }}
                     >
                       {item.description}
                     </ListItem>
@@ -168,18 +171,42 @@ export function Navbar() {
               <details>
                 <summary className="text-foreground hover:text-primary cursor-pointer">More</summary>
                 <div className="pl-4 mt-2 flex flex-col gap-2">
-                  <Link href="/guidelines" className="text-foreground hover:text-primary">
+                  <button
+                    onClick={() => {
+                      scrollToSection('guidelines')
+                      setSheetOpen(false)
+                    }}
+                    className="text-foreground hover:text-primary text-left"
+                  >
                     Guidelines
-                  </Link>
-                  <Link href="/gallery" className="text-foreground hover:text-primary">
+                  </button>
+                  <button
+                    onClick={() => {
+                      scrollToSection('gallery')
+                      setSheetOpen(false)
+                    }}
+                    className="text-foreground hover:text-primary text-left"
+                  >
                     Gallery
-                  </Link>
-                  <Link href="/faq" className="text-foreground hover:text-primary">
+                  </button>
+                  <button
+                    onClick={() => {
+                      scrollToSection('faq')
+                      setSheetOpen(false)
+                    }}
+                    className="text-foreground hover:text-primary text-left"
+                  >
                     FAQ
-                  </Link>
-                  <Link href="/contact" className="text-foreground hover:text-primary">
+                  </button>
+                  <button
+                    onClick={() => {
+                      scrollToSection('contact')
+                      setSheetOpen(false)
+                    }}
+                    className="text-foreground hover:text-primary text-left"
+                  >
                     Contact
-                  </Link>
+                  </button>
                 </div>
               </details>
             </nav>
@@ -194,18 +221,19 @@ export function Navbar() {
     </header>
   )
 }
-
+  
 const ListItem = React.forwardRef<
   React.ElementRef<"a">,
-  React.ComponentPropsWithoutRef<"a">
->(({ className, title, children, ...props }, ref) => {
+  React.ComponentPropsWithoutRef<"a"> & { onClick?: () => void }
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+>(({ className, title, children, onClick, ...props }, ref) => {
   return (
     <li>
       <NavigationMenuLink asChild>
-        <a
-          ref={ref}
+        <button
+          onClick={onClick}
           className={cn(
-            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+            "block w-full text-left select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
             className
           )}
           {...props}
@@ -214,10 +242,9 @@ const ListItem = React.forwardRef<
           <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
             {children}
           </p>
-        </a>
+        </button>
       </NavigationMenuLink>
     </li>
   )
 })
 ListItem.displayName = "ListItem"
-

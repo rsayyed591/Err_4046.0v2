@@ -7,6 +7,9 @@ import { Footer } from '@/components/footer'
 import { AnimatedGridBackground } from '@/components/animated-grid'
 import Timeline from '@/components/timeline'
 import HackathonHistory from '@/components/hackathon-history'
+import FAQ from '@/components/faq'
+import Guidelines from '@/components/guidelines'
+import Gallery from '@/components/gallery'
 
 export default function Home() {
   return (
@@ -22,8 +25,11 @@ export default function Home() {
         </section>
         <Countdown />
         <Domains />
-        <HackathonHistory/>
-        <Timeline/>
+        <HackathonHistory />
+        <Timeline />
+        <Guidelines />
+        <Gallery />
+        <FAQ />
         <Footer />
       </div>
     </main>
