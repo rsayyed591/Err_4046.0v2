@@ -77,6 +77,11 @@ export function Navbar() {
               </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
+              <Link href="/store" className={cn(navigationMenuTriggerStyle(), "hover-underline-animation")}>
+                Store
+              </Link>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
               <button
                 onClick={() => scrollToSection('timeline')}
                 className={cn(navigationMenuTriggerStyle(), "hover-underline-animation")}
