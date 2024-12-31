@@ -155,6 +155,9 @@ export function Navbar() {
               <Link href="/ps" className="text-foreground hover:text-primary text-left">
                 PS
               </Link>
+              <Link href="/store" className="text-foreground hover:text-primary text-left">
+                Store
+              </Link>
               <button
                 onClick={() => {
                   scrollToSection('timeline')
