@@ -11,6 +11,7 @@ import FAQ from '@/components/faq'
 import Guidelines from '@/components/guidelines'
 import Gallery from '@/components/gallery'
 import Contact from '@/components/contact'
+import { PrizeGrid } from '@/components/prize-grid'
 
 export default function Home() {
   return (
@@ -25,6 +26,9 @@ export default function Home() {
           <About />
         </section>
         <Countdown />
+        <section id="prizes">
+            <PrizeGrid />
+          </section>
         <Domains />
         <HackathonHistory />
         <Timeline />

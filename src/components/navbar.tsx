@@ -57,6 +57,14 @@ export function Navbar() {
             </NavigationMenuItem>
             <NavigationMenuItem>
               <button
+                onClick={() => scrollToSection('prizes')}
+                className={cn(navigationMenuTriggerStyle(), "hover-underline-animation")}
+              >
+                Prizes
+              </button>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
+              <button
                 onClick={() => scrollToSection('domains')}
                 className={cn(navigationMenuTriggerStyle(), "hover-underline-animation")}
               >
@@ -133,6 +141,15 @@ export function Navbar() {
                 className="text-foreground hover:text-primary text-left"
               >
                 About
+              </button>
+              <button
+                onClick={() => {
+                  scrollToSection('prizes')
+                  setSheetOpen(false)
+                }}
+                className="text-foreground hover:text-primary text-left"
+              >
+                Prizes
               </button>
               <button
                 onClick={() => {
