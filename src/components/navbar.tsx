@@ -50,7 +50,7 @@ export function Navbar() {
             <NavigationMenuItem>
               <button
                 onClick={() => scrollToSection('about')}
-                className={navigationMenuTriggerStyle()}
+                className={cn(navigationMenuTriggerStyle(), "hover-underline-animation")}
               >
                 About
               </button>
@@ -58,7 +58,7 @@ export function Navbar() {
             <NavigationMenuItem>
               <button
                 onClick={() => scrollToSection('domains')}
-                className={navigationMenuTriggerStyle()}
+                className={cn(navigationMenuTriggerStyle(), "hover-underline-animation")}
               >
                 Domains
               </button>
@@ -66,29 +66,26 @@ export function Navbar() {
             <NavigationMenuItem>
               <button
                 onClick={() => scrollToSection('hackathons')}
-                className={navigationMenuTriggerStyle()}
+                className={cn(navigationMenuTriggerStyle(), "hover-underline-animation")}
               >
                 Hackathons
               </button>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <button
-                onClick={() => scrollToSection('contact')}
-                className={navigationMenuTriggerStyle()}
-              >
-                Contact
-              </button>
+              <Link href="/ps" className={cn(navigationMenuTriggerStyle(), "hover-underline-animation")}>
+                PS
+              </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
               <button
                 onClick={() => scrollToSection('timeline')}
-                className={navigationMenuTriggerStyle()}
+                className={cn(navigationMenuTriggerStyle(), "hover-underline-animation")}
               >
                 Timeline
               </button>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <NavigationMenuTrigger>More</NavigationMenuTrigger>
+              <NavigationMenuTrigger className="hover-underline-animation">More</NavigationMenuTrigger>
               <NavigationMenuContent>
                 <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
                   {[
@@ -150,15 +147,9 @@ export function Navbar() {
               >
                 Hackathons
               </button>
-              <button
-                onClick={() => {
-                  scrollToSection('contact')
-                  setSheetOpen(false)
-                }}
-                className="text-foreground hover:text-primary text-left"
-              >
-                Contact
-              </button>
+              <Link href="/ps" className="text-foreground hover:text-primary text-left">
+                PS
+              </Link>
               <button
                 onClick={() => {
                   scrollToSection('timeline')
@@ -225,20 +216,20 @@ export function Navbar() {
 const ListItem = React.forwardRef<
   React.ElementRef<"a">,
   React.ComponentPropsWithoutRef<"a"> & { onClick?: () => void }
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
->(({ className, title, children, onClick, ...props }, ref) => {
+>
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+(({ className, title, children, onClick, ...props }, ref) => {
   return (
     <li>
       <NavigationMenuLink asChild>
-      <button
-
-  type="button"
-  onClick={onClick}
-  className={cn(
-    "block w-full text-left select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
-    className
-  )}
->
+        <button
+          type="button"
+          onClick={onClick}
+          className={cn(
+            "block w-full text-left select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+            className
+          )}
+        >
           <div className="text-sm font-medium leading-none">{title}</div>
           <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
             {children}
@@ -249,3 +240,4 @@ const ListItem = React.forwardRef<
   )
 })
 ListItem.displayName = "ListItem"
+

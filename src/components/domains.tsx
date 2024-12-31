@@ -4,60 +4,75 @@ import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { Card, CardContent } from "@/components/ui/card"
 import { pixelFont } from '@/app/fonts'
+import { AnimatedGridBackground } from '@/components/animated-grid'
+
 const domains = [
   {
     title: "Machine Learning",
-    icon: "https://cdn-icons-png.flaticon.com/512/8618/8618881.png",
+    icon: "/icons/machineLearning.png",
   },
   {
     title: "Web Development",
-    icon: "https://cdn-icons-png.flaticon.com/512/2210/2210153.png",
-  },
-  {
-    title: "Cloud Computing",
-    icon: "https://cdn-icons-png.flaticon.com/512/4215/4215831.png",
+    icon: "/icons/webDev.png",
   },
   {
     title: "Blockchain",
-    icon: "/blockchain.jpg",
+    icon: "/icons/blockchain.png",
   },
   {
     title: "Cyber Security",
-    icon: "/cyber.jpg",
+    icon: "/icons/cyberSec.png",
   },
   {
     title: "App Development",
-    icon: "https://cdn-icons-png.flaticon.com/512/2272/2272704.png",
+    icon: "/icons/appDev.png",
   }
 ]
 
+const cardVariants = {
+  initial: { y: 0 },
+  animate: {
+    y: [0, -5, 0],
+    transition: {
+      duration: 3,
+      ease: "easeInOut",
+      repeat: Infinity,
+      repeatType: "reverse" as const
+    }
+  }
+};
+
 export function Domains() {
   return (
-    <section id="domains" className="py-20">
+    <section id="domains" className="py-20 bg-[url('/blob-scene-haikei.svg')] bg-cover bg-center">
       <div className="container px-4 mx-auto">
-        <h1 className={`text-3xl md:text-5xl font-bold mb-12 md:mb-20 text-center ${pixelFont.className}`}>
-                  Domains
-                </h1>
+        <h1 className={`text-3xl md:text-5xl font-bold mb-12 md:mb-20 text-center ${pixelFont.className} text-primary`}>
+          Domains
+        </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {domains.map((domain) => (
             <motion.div
               key={domain.title}
-              whileHover={{ scale: 1.05 }}
-              transition={{ type: "spring", stiffness: 300 }}
+              variants={cardVariants}
+              initial="initial"
+              animate="animate"
+              className="overflow-hidden"
             >
-              <Card className="overflow-hidden">
-                <CardContent className="p-6">
+              <Card className="relative overflow-hidden backdrop-blur-sm border-primary/20">
+                <div className="absolute inset-0">
+                  <AnimatedGridBackground />
+                </div>
+                <CardContent className="p-6 relative z-10">
                   <div className="flex flex-col items-center">
-                    <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-primary/10">
+                    <div className="relative mb-4 h-24 w-24">
                       <Image
                         src={domain.icon}
                         alt={domain.title}
-                        width={40}
-                        height={40}
-                        className="text-primary"
+                        fill
+                        className="object-contain"
                       />
                     </div>
-                    <h3 className="text-2xl font-semibold text-center">{domain.title}</h3>
+                    <h3 className="text-2xl font-semibold text-center text-primary">{domain.title}</h3>
                   </div>
                 </CardContent>
               </Card>

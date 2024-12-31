@@ -26,7 +26,9 @@ export function Hero() {
               Join us on 18th and 19th of January 2025 for 36 hours of creation, innovation, & fun with
               over 500+ students.
             </p>
+            <div className='my-4'>
             <DevfolioButton />
+            </div>
           </div>
           <div className="relative h-[300px] sm:h-[400px] lg:h-[500px]">
             <DinoScene />

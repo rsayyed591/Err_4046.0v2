@@ -10,6 +10,7 @@ import HackathonHistory from '@/components/hackathon-history'
 import FAQ from '@/components/faq'
 import Guidelines from '@/components/guidelines'
 import Gallery from '@/components/gallery'
+import Contact from '@/components/contact'
 
 export default function Home() {
   return (
@@ -30,6 +31,7 @@ export default function Home() {
         <Guidelines />
         <Gallery />
         <FAQ />
+        <Contact />
         <Footer />
       </div>
     </main>

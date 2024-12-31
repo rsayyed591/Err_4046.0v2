@@ -92,11 +92,11 @@ export default function Guidelines() {
                 <div className="mt-12 space-y-6 text-center">
                   <div className="p-4 border border-primary/20 rounded-lg bg-primary/5">
                     <p className="text-lg font-semibold text-primary">
-                      The problem statements will be unveiled seven days prior to the event.
+                      The problem statements will be unveiled three days prior to the event.
                     </p>
                   </div>
                   
-                  <Button variant="outline" className="gap-2">
+                  <Button variant="outline" className="gap-2" onClick={() => window.open('/error404_5.0_undertaking.pdf', '_blank')}>
                     <Download className="w-4 h-4" />
                     Download Undertaking
                   </Button>
