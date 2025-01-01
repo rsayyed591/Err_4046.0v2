@@ -1,1 +1,9 @@
-{ "rewrites": [{ "source": "/(.*)", "destination": "/" }] }
+{
+    "routes": [
+      { "handle": "filesystem" },
+      { "src": "/ps", "dest": "/ps" },
+      { "src": "/store", "dest": "/store" },
+      { "src": "/(.*)", "status": 404, "dest": "/not-found" }
+    ]
+}
+  
