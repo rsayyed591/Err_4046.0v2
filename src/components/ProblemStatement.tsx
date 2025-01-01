@@ -1,7 +1,17 @@
 'use client'
 
+import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { pixelFont } from '@/app/fonts'
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogFooter,
+} from "@/components/ui/dialog"
+import { Button } from "@/components/ui/button"
 
 // Problem Statement JSON (commented out for now)
 /*
@@ -163,8 +173,28 @@ const domains = [
 ]
 
 export default function ProblemStatements() {
+  const [isModalOpen, setIsModalOpen] = useState(false)
+
+  useEffect(() => {
+    setIsModalOpen(true)
+  }, [])
+
   return (
-    <section className="py-24 min-h-screen text-black">
+    <section className="py-16 min-h-screen text-black">
+      <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
+        <DialogContent className="bg-white/80 backdrop-blur-sm">
+          <DialogHeader>
+            <DialogTitle className={`text-2xl ${pixelFont.className} text-primary`}>Important Announcement</DialogTitle>
+            <DialogDescription className="text-lg">
+              The Problem Statements will be revealed on January 15th, 2025, along with the list of selected teams.
+            </DialogDescription>
+          </DialogHeader>
+          <DialogFooter>
+            <Button onClick={() => setIsModalOpen(false)}>OK</Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
+
       <div className="container px-4 mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -172,13 +202,16 @@ export default function ProblemStatements() {
           transition={{ duration: 0.5 }}
           className="text-center mb-4"
         >
-          <h1 className={`text-3xl md:text-5xl font-bold mb-12 md:mb-20 text-center ${pixelFont.className}`}>
+          <h1 className={`text-4xl md:text-6xl font-bold mb-6 ${pixelFont.className}`}>
             Problem Statements
           </h1>
           <div className="max-w-3xl mx-auto">
             <p className="text-gray-800 text-lg md:text-xl">
-              Exciting challenges await! Our problem statements will be revealed soon.
+              Exciting challenges await! Our problem statements will be revealed on the 15th of January.
               Stay tuned for innovative opportunities across multiple domains.
+            </p>
+            <p className={`text-xl md:text-2xl font-semibold mt-4 ${pixelFont.className} text-primary`}>
+              Mark your calendars: January 15, 2025!
             </p>
           </div>
         </motion.div>

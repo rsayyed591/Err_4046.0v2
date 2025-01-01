@@ -31,7 +31,7 @@ const events: TimelineEvent[] = [
   {
     date: "15TH JAN 2025",
     title: "Final Team Announcement",
-    description: "The selected teams will be revealed! Check if your team made it to the main event.",
+    description: "The selected teams will be revealed! Check if your team has made it to the main event. The Problem Statement (PS) will also be announced on the same day.",
     icon: <Trophy className="w-6 h-6" />,
     side: 'left'
   },
