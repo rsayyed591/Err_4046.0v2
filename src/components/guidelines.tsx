@@ -96,7 +96,7 @@ export default function Guidelines() {
                     </p>
                   </div>
                   
-                  <Button variant="outline" className="gap-2" onClick={() => window.open('/error404_5.0_undertaking.pdf', '_blank')}>
+                  <Button variant="outline" className="gap-2" onClick={() => window.open('/error404_6.0_undertaking.pdf', '_blank')}>
                     <Download className="w-4 h-4" />
                     Download Undertaking
                   </Button>
