@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { pixelFont } from '@/app/fonts'
 
 const messages = [
-  "Hackathon starts at 18th Jan!",
+  "Hackathon starts at 15th Feb!",
   "Innovations roar, errors no more!",
   "Registration now open!",
   "Join us for 36 hours of coding!",
