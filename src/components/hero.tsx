@@ -23,7 +23,7 @@ export function Hero() {
               <TypedText strings={typedStrings} />
             </div>
             <p className="text-xl text-muted-foreground max-w-xl">
-              Join us on 18th and 19th of January 2025 for 36 hours of creation, innovation, & fun with
+              Join us on 15th and 16th of February 2025 for 36 hours of creation, innovation, & fun with
               over 500+ students.
             </p>
             <div className='my-4'>
