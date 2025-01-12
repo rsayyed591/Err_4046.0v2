@@ -41,7 +41,7 @@ const faqs = [
     },
     {
       question: "What is the team size limit?",
-      answer: "Teams should consist of 2-4 members. Solo participation is not allowed as we encourage collaborative learning and teamwork."
+      answer: "Teams should consist of 4-5 members. Solo participation is not allowed as we encourage collaborative learning and teamwork."
     },
     {
       question: "Will there be mentors available?",

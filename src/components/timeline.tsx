@@ -22,28 +22,28 @@ const events: TimelineEvent[] = [
     side: 'left'
   },
   {
-    date: "13TH JAN 2025",
+    date: "26TH JAN 2025",
     title: "Registration Closes",
     description: "Last chance to join! Make sure your team is registered before the deadline.",
     icon: <Users className="w-6 h-6" />,
     side: 'right'
   },
   {
-    date: "15TH JAN 2025",
+    date: "31ST JAN 2025",
     title: "Final Team Announcement",
     description: "The selected teams will be revealed! Check if your team has made it to the main event. The Problem Statement (PS) will also be announced on the same day.",
     icon: <Trophy className="w-6 h-6" />,
     side: 'left'
   },
   {
-    date: "18TH JAN 2025",
+    date: "15TH FEB 2025",
     title: "Hackathon Begins",
     description: "The main event starts! 36 hours of coding challenges await.",
     icon: <Terminal className="w-6 h-6" />,
     side: 'right'
   },
   {
-    date: "19TH JAN 2025",
+    date: "16TH FEB 2025",
     title: "Project Submissions",
     description: "Time to showcase your work! Submit your projects for evaluation.",
     icon: <Footprints className="w-6 h-6" />,

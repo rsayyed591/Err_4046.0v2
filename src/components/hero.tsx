@@ -6,7 +6,7 @@ import { DevfolioButton } from './devfolio-button'
 export function Hero() {
   const typedStrings = [
     'Win awesome prizes',
-    'On 18 January - 19 January',
+    'On 15 February - 16 February',
     'Build amazing projects',
     'Network with peers'
   ]
