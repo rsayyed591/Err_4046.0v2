@@ -28,7 +28,7 @@ const products = [
     id: '1',
     name: 'Err_404 Hoodie',
     image: '/images/store/hoodie.png',
-    price: 499,
+    price: 649,
     originalPrice: 999,
     category: 'Hoodies',
     isNew: true,

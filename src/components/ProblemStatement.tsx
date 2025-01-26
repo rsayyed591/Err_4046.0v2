@@ -186,7 +186,7 @@ export default function ProblemStatements() {
           <DialogHeader>
             <DialogTitle className={`text-2xl ${pixelFont.className} text-primary`}>Important Announcement</DialogTitle>
             <DialogDescription className="text-lg">
-              The Problem Statements will be revealed on January 15th, 2025, along with the list of selected teams.
+              The Problem Statements will be revealed on February 12th, 2025, along with the list of selected teams.
             </DialogDescription>
           </DialogHeader>
           <DialogFooter>
