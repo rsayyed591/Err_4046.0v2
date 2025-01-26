@@ -207,11 +207,11 @@ export default function ProblemStatements() {
           </h1>
           <div className="max-w-3xl mx-auto">
             <p className="text-gray-800 text-lg md:text-xl">
-              Exciting challenges await! Our problem statements will be revealed on the 15th of January.
+              Exciting challenges await! Our problem statements will be revealed on the 12th of February.
               Stay tuned for innovative opportunities across multiple domains.
             </p>
             <p className={`text-xl md:text-2xl font-semibold mt-4 ${pixelFont.className} text-primary`}>
-              Mark your calendars: January 15, 2025!
+              Mark your calendars: February 12, 2025!
             </p>
           </div>
         </motion.div>
