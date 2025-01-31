@@ -44,7 +44,7 @@ const cardVariants = {
 
 export function Domains() {
   return (
-    <section id="domains" className="py-20 bg-[url('/blob-scene-haikei.svg')] bg-cover bg-center">
+    <section id="domains" className="py-20">
       <div className="container px-4 mx-auto">
         <h1 className={`text-3xl md:text-5xl font-bold mb-12 md:mb-20 text-center ${pixelFont.className} text-primary`}>
           Domains

@@ -85,6 +85,11 @@ export function Navbar() {
               </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
+              <Link href="/shortlistedteams" className={cn(navigationMenuTriggerStyle(), "hover-underline-animation")}>
+                Shortlisted Teams
+              </Link>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
               <Link href="/store" className={cn(navigationMenuTriggerStyle(), "hover-underline-animation")}>
                 Store
               </Link>
@@ -171,6 +176,9 @@ export function Navbar() {
               </button>
               <Link href="/ps" className="text-foreground hover:text-primary text-left">
                 PS
+              </Link>
+              <Link href="/shortlisted" className="text-foreground hover:text-primary text-left">
+                Shortlisted Teams
               </Link>
               <Link href="/store" className="text-foreground hover:text-primary text-left">
                 Store

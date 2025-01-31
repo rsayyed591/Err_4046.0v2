@@ -2,7 +2,7 @@
 
 import React, { useEffect, useRef } from 'react'
 import { motion, useInView, useAnimation } from 'framer-motion'
-import { Calendar, Users, Trophy, Terminal, Footprints } from 'lucide-react'
+import { Calendar, Users, Trophy, Terminal, Footprints, NotebookText } from 'lucide-react'
 import { pixelFont } from '@/app/fonts'
 
 interface TimelineEvent {
@@ -31,23 +31,30 @@ const events: TimelineEvent[] = [
   {
     date: "31ST JAN 2025",
     title: "Final Team Announcement",
-    description: "The selected teams will be revealed! Check if your team has made it to the main event. The Problem Statement (PS) will also be announced on the same day.",
+    description: "The selected teams will be revealed! Check if your team has made it to the main event.",
     icon: <Trophy className="w-6 h-6" />,
     side: 'left'
   },
   {
+    date: "12TH FEB 2025",
+    title: "PS Announcement",
+    description: "The problem statement will be released! Get ready to tackle the challenges.",
+    icon: <NotebookText className="w-6 h-6" />,
+    side: 'right'
+  },
+  {    
     date: "15TH FEB 2025",
     title: "Hackathon Begins",
     description: "The main event starts! 36 hours of coding challenges await.",
     icon: <Terminal className="w-6 h-6" />,
-    side: 'right'
+    side: 'left'
   },
   {
     date: "16TH FEB 2025",
     title: "Project Submissions",
     description: "Time to showcase your work! Submit your projects for evaluation.",
     icon: <Footprints className="w-6 h-6" />,
-    side: 'left'
+    side: 'right'
   }
 ]
 
