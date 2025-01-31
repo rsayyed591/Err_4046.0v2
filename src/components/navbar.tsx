@@ -177,7 +177,7 @@ export function Navbar() {
               <Link href="/ps" className="text-foreground hover:text-primary text-left">
                 PS
               </Link>
-              <Link href="/shortlisted" className="text-foreground hover:text-primary text-left">
+              <Link href="/shortlistedteams" className="text-foreground hover:text-primary text-left">
                 Shortlisted Teams
               </Link>
               <Link href="/store" className="text-foreground hover:text-primary text-left">
