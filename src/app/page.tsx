@@ -12,6 +12,7 @@ import Guidelines from '@/components/guidelines'
 import Gallery from '@/components/gallery'
 import Contact from '@/components/contact'
 import { PrizeGrid } from '@/components/prize-grid'
+import Sponsors from '@/components/Sponsors'
 
 export default function Home() {
   return (
@@ -36,6 +37,7 @@ export default function Home() {
         <Gallery />
         <FAQ />
         <Contact />
+        <Sponsors />
         <Footer />
       </div>
     </main>
