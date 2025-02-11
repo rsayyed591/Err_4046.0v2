@@ -35,9 +35,9 @@ export default function Home() {
         <Timeline />
         <Guidelines />
         <Gallery />
+        <Sponsors />
         <FAQ />
         <Contact />
-        <Sponsors />
         <Footer />
       </div>
     </main>
