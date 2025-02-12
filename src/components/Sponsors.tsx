@@ -49,6 +49,13 @@ const sponsors: Sponsor[] = [
     website: "https://craftlab.ai/",
   },
   {
+    "title": "Certificate Partner",
+    "name": "NetCredential",
+    "logo": "/sponsors/netcredential.png",
+    "benefits": "NetCredential is a platform that helps you manage your digital credentials and certificates securely, ensuring your data is safe and accessible.",
+    "website": "https://netcredential.com/"
+  },
+  {
     title: "Interview Prep Partner",
     name: "InterviewBuddy",
     logo: "/sponsors/interviewBuddy.png",
@@ -102,6 +109,14 @@ const sponsors: Sponsor[] = [
     benefits:
       "MOJOCO Tender Coconut Water provides natural hydration, essential electrolytes, and antioxidants, supporting energy, heart health, and skin wellness.",
     website: "https://www.instagram.com/mojoco.official",
+  },
+    {
+    title: "Entertainment Partner",
+    name: "Smaaash",
+    logo: "/sponsors/smaaash.png",
+    benefits:
+      "Smaaash Entertainment offers a unique blend of immersive virtual reality gaming, thrilling sports experiences, and fun-filled activities, making it an ideal destination for entertainment and team bonding.",
+    website: "https://smaaash-entertainment.in/",
   },
   {
     title: "Travel & Learning Partner",
