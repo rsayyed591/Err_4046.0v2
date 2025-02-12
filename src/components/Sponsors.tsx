@@ -42,11 +42,11 @@ const sponsors: Sponsor[] = [
   },
   {
     title: "Certificate Partner",
-    name: "NetCredential",
-    logo: "/sponsors/netcredential.png",
+    name: "MetaCraftlab",
+    logo: "/sponsors/craftlab.png",
     benefits:
-      "NetCredential is a platform that helps you manage your digital credentials and certificates securely, ensuring your data is safe and accessible.",
-    website: "https://netcredential.com/",
+      "MetaCraftLab helps streamline AI-powered content creation, automation, and collaboration, enhancing productivity and efficiency for businesses and creators.",
+    website: "https://craftlab.ai/",
   },
   {
     title: "Interview Prep Partner",
@@ -64,13 +64,28 @@ const sponsors: Sponsor[] = [
       "TechBairn provides industry-focused training, mentorship, and placement support, helping students and professionals upskill and secure job opportunities in tech.",
     website: "https://www.techbairn.com/",
   },
+{
+    title: "Tech Gift Voucher Partner",
+    name: "RevUp",
+    logo: "/sponsors/RevUp.png",
+    benefits:
+      "RevUp provides personalized health coaching and tracking tools to help you manage your daily health and keep your healthcare team informed between visits.",
+    website: "https://getrevup.com/",
+  },
   {
-    title: "Mentorship Partner",
+    title: "Tech Gift Voucher Partner",
     name: "mentorX",
     logo: "/sponsors/MENTORx.png",
     benefits:
       "TheMentorX provides mentorship, career guidance, and skill development opportunities to help individuals achieve professional growth and success.",
     website: "https://thementorx.com/",
+  },
+{
+    title: "Tech Gift Voucher Partner",
+    name: "Hover Roboticx",
+    logo: "/sponsors/hoverRobotix.png",
+    benefits: "Hover Roboticx is a robotics company that specializes in developing drones and other robotic products.",
+    website: "https://hoverrobotix.com",
   },
   {
     title: "Hackathon Partner",
@@ -81,14 +96,6 @@ const sponsors: Sponsor[] = [
     website: "https://devfolio.co/",
   },
   {
-    title: "Health & Wellness Partner",
-    name: "RevUp",
-    logo: "/sponsors/RevUp.png",
-    benefits:
-      "RevUp provides personalized health coaching and tracking tools to help you manage your daily health and keep your healthcare team informed between visits.",
-    website: "https://getrevup.com/",
-  },
-  {
     title: "Food & Beverage Partner",
     name: "Mojoco",
     logo: "/sponsors/mojoco.png",
@@ -97,27 +104,12 @@ const sponsors: Sponsor[] = [
     website: "https://www.instagram.com/mojoco.official",
   },
   {
-    title: "AI & Automation Partner",
-    name: "MetaCraftlab",
-    logo: "/sponsors/craftlab.png",
-    benefits:
-      "MetaCraftLab helps streamline AI-powered content creation, automation, and collaboration, enhancing productivity and efficiency for businesses and creators.",
-    website: "https://craftlab.ai/",
-  },
-  {
     title: "Travel & Learning Partner",
     name: "Learn While Travelling",
     logo: "/sponsors/lwt.jpg",
     benefits:
       "Learn While Travelling is a platform that provides you with the best travel experiences and helps you learn while you travel.",
     website: "https://learnwhiletravelling.com/",
-  },
-  {
-    title: "Robotics Partner",
-    name: "Hover Roboticx",
-    logo: "/sponsors/hoverRobotix.png",
-    benefits: "Hover Roboticx is a robotics company that specializes in developing drones and other robotic products.",
-    website: "https://hoverrobotix.com",
   },
   {
     title: "Blockchain Partner",
