@@ -41,6 +41,13 @@ const sponsors: Sponsor[] = [
     website: "https://cncmllc.com/",
   },
   {
+    title : "Technology Partner",
+    name : "Bitkraft Technologies",
+    logo : "/sponsors/bitkraft.png",
+    benefits : "Bitkraft provides innovative software solutions, helping businesses streamline operations, enhance digital presence, and optimize technology-driven growth.",
+    website : "https://bitkraft.co.in/"
+  },
+  {
     title: "Certificate Partner",
     name: "MetaCraftlab",
     logo: "/sponsors/craftlab.png",
