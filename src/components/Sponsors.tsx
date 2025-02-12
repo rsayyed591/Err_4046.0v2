@@ -48,6 +48,13 @@ const sponsors: Sponsor[] = [
     website : "https://bitkraft.co.in/"
   },
   {
+    title: "Technology Partner",
+    name: "Aiolos",
+    logo: "/sponsors/aiolos.png",
+    benefits: "Aiolos Cloud offers scalable, high-performance cloud computing solutions optimized for AI workloads, enabling faster model training, deployment, and real-time inference.",
+    website: "https://aiolos.cloud/",
+  },
+  {
     title: "Certificate Partner",
     name: "MetaCraftlab",
     logo: "/sponsors/craftlab.png",
@@ -173,11 +180,7 @@ const groupedSponsors = sponsors.reduce(
 
 export default function Sponsors() {
   return (
-    <section className="py-16 min-h-screen text-foreground relative overflow-hidden">
-      {/* Subtle grid background */}
-      <div className="absolute inset-0 z-0 opacity-5">
-        <div className="h-full w-full bg-grid-black/[0.2]" />
-      </div>
+    <section className="py-8 min-h-screen text-foreground relative overflow-hidden">
 
       <div className="container mx-auto px-4 relative z-10">
         <motion.div
