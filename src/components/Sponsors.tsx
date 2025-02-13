@@ -133,12 +133,26 @@ const sponsors: Sponsor[] = [
     website: "https://smaaash-entertainment.in/",
   },
   {
-    title: "Travel & Learning Partner",
+    title: "Travel Partner",
     name: "Learn While Travelling",
     logo: "/sponsors/lwt.jpg",
     benefits:
       "Learn While Travelling is a platform that provides you with the best travel experiences and helps you learn while you travel.",
     website: "https://learnwhiletravelling.com/",
+  },
+  {
+    title:"Travel Partner",
+    name:"MindFlix Holidays",
+    logo:"/sponsors/mindflix.jpg",
+    benefits:"Mindflix Holidays likely offers curated travel experiences, simplifying trip planning with customized packages, exclusive deals, and seamless booking for stress-free vacations.",
+    website:"https://www.mindflixholidays.com/",
+  },
+  {
+    title:"Internship Partner",
+    name:"Tusta",
+    logo:"/sponsors/tusta.png",
+    benefits:"Tusta is a mobile-first platform that enables retail traders to create, test, and automate unlimited trading strategies across multiple brokers, offering features like real-time analysis, robust risk management, and seamless integration with TradingView.",
+    website:"https://www.tusta.co/",
   },
   {
     title: "Blockchain Partner",
